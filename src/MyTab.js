@@ -39,7 +39,7 @@ function a11yProps(index) {
     };
 }
 
-export default function MyTabs({ baughtItems, ignoredItems, totalItems }) {
+export default function MyTabs({ boughtItems, ignoredItems, totalItems }) {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -50,13 +50,13 @@ export default function MyTabs({ baughtItems, ignoredItems, totalItems }) {
         <Box sx={{ width: '500px' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
-                    <Tab label="Baught" {...a11yProps(0)} />
+                    <Tab label="bought" {...a11yProps(0)} />
                     <Tab label="Ignored" {...a11yProps(1)} />
                     <Tab label="All" {...a11yProps(2)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-                {baughtItems.map((item) =>
+                {boughtItems.map((item) =>
                     <Box marginBottom="20px">
                         <MyCardTwo item={item} />
                     </Box>

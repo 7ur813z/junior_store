@@ -44,7 +44,7 @@ const theme = createTheme({
     }
 });
 
-export default function MyPrimary({ total, item, getPreviousItem, getNextItem, baughtItems, ignoredItems, totalItems }) {
+export default function MyPrimary({ total, item, getPreviousItem, getNextItem, boughtItems, ignoredItems, totalItems }) {
 
     return (
         <ThemeProvider theme={theme}>
@@ -81,7 +81,7 @@ export default function MyPrimary({ total, item, getPreviousItem, getNextItem, b
                     </Box>
 
                     <Box marginTop={5}>
-                        <MyTab baughtItems={baughtItems} ignoredItems={ignoredItems} totalItems={totalItems} />
+                        <MyTab boughtItems={boughtItems} ignoredItems={ignoredItems} totalItems={totalItems} />
                     </Box>
                 </Box>
             </Container>

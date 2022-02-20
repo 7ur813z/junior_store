@@ -12,7 +12,7 @@ export default function App() {
 
   const [items, setItems] = useState([]);
 
-  const [baughtItems, setBaughtItems] = useState([]);
+  const [boughtItems, setboughtItems] = useState([]);
   const [ignoredItems, setIgnoredItems] = useState([]);
   const [totalItems, setTotalItems] = useState([]);
 
@@ -35,7 +35,7 @@ export default function App() {
     /*Axios.get(`https://fakestoreapi.com/products/${id}`)
       .then((response) => setItem(response.data.title))
       .then(setId(id - 1));*/
-    setBaughtItems([...baughtItems, item]);
+    setboughtItems([...boughtItems, item]);
     setTotalItems([...totalItems, item]);
   };
 
@@ -54,7 +54,7 @@ export default function App() {
     <>
       {items.map((item) =>
         item.id === id ? (
-          <MyPrimary total={total} item={item} getPreviousItem={getPreviousItem} getNextItem={getNextItem} baughtItems={baughtItems} ignoredItems={ignoredItems} totalItems={totalItems} />
+          <MyPrimary total={total} item={item} getPreviousItem={getPreviousItem} getNextItem={getNextItem} boughtItems={boughtItems} ignoredItems={ignoredItems} totalItems={totalItems} />
         ) : null
       )}
     </>
