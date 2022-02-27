@@ -6,8 +6,9 @@ Basic online store, with semi-retro design, using data from a public API, displa
 
 ## Resources
 [ReactJS](https://reactjs.org/)
+
 [Fake Store API](https://fakestoreapi.com/)
 
-##Run
+## Run
 1. `npm install`
 2. `npm start`
